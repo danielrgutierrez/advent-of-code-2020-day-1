@@ -2,6 +2,6 @@
   (:require [clojure.test :refer :all]
             [day-1.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest part-1-test
+  (testing "Part 1 Example"
+    (is (= (part-1 [1721 979 366 299 675 1456]) 514579))))
