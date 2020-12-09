@@ -1,4 +1,5 @@
 (ns day-1.core
+  (:require [clojure.java.io :as io])
   (:gen-class))
 
 (defn part-1
@@ -7,6 +8,7 @@
   (first (for [x list y list :when (= (+ x y) 2020)] (* x y))))
 
 (defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+  "Reads the specified file and finds the solution."
+  [filename]
+  (with-open [rdr (io/reader filename)]
+    (doall (part-1 (line-seq rdr)))))
